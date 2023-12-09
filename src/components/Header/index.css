@@ -13,10 +13,10 @@
 
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 100%;
   max-width: 1110px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 5px;
+  padding-bottom: 0px;
   padding-left: 15px;
 }
 

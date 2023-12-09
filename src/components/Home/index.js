@@ -10,34 +10,22 @@ import './index.css'
 const imageData = [
   {
     id: uuidv4(),
-    image: 'https://bookshelf-snowy.vercel.app/assets/images/hero3.png',
-    heading: 'LET MAKE THE BEST INVESTMENT',
-    headings: 'There Is No Friend As',
-    headingss: 'loyal As A Book',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit Ad harum quibusdam, assumenda quia explicabo',
+    image: 'https://bookshelf-snowy.vercel.app/assets/images/hero.png',
+
     button: 'Shop now',
   },
 
   {
     id: uuidv4(),
     image: 'https://bookshelf-snowy.vercel.app/assets/images/hero3.png',
-    heading: 'LET MAKE THE BEST INVESTMENT',
-    headings: 'There Is No Friend As',
-    headingss: 'loyal As A Book',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit Ad harum quibusdam, assumenda quia explicabo',
+
     button: 'Shop now',
   },
 
   {
     id: uuidv4(),
-    image: 'https://bookshelf-snowy.vercel.app/assets/images/hero3.png',
-    heading: 'LET MAKE THE BEST INVESTMENT',
-    headings: 'There Is No Friend As',
-    headingss: 'loyal As A Book',
-    paragraph:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit Ad harum quibusdam, assumenda quia explicabo',
+    image: 'https://bookshelf-snowy.vercel.app/assets/images/hero4.png',
+
     button: 'Shop now',
   },
 ]
@@ -60,11 +48,20 @@ const Home = () => {
         {imageData.map(item => (
           <div className="home-container" key={item.id}>
             <div className="text-container">
-              <h1 className="heading">{item.heading}</h1>
-              <h3>{item.headings}</h3>
-              <h2>{item.headingss}</h2>
-              <p>{item.paragraph}</p>
-              <button type="button">{item.button}</button>
+              <h1 className="heading">LETs MAKE THE BEST INVESTMENT</h1>
+              <h3 className="heading1">
+                There Is No Friend As <br />
+                loyal As A Book
+              </h3>
+
+              <p className="paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit Ad
+                <br />
+                harum quibusdam, assumenda quia explicabo
+              </p>
+              <button type="button" className="shop-now-button ">
+                {item.button}
+              </button>
             </div>
             <img
               src={item.image}
@@ -74,6 +71,36 @@ const Home = () => {
           </div>
         ))}
       </Slider>
+      <div className="card-container">
+        <div className="card-desing">
+          <img
+            src="https://bookshelf-snowy.vercel.app/assets/images/book1.jpg"
+            alt="logo"
+            className="image-card"
+          />
+          <div className="description">
+            <h1 className="card-heading">SALE UP TO 15%</h1>
+            <h2 className="card-heading1">
+              Innovation in Education (Hardcover)
+            </h2>
+            <p className="card-paragraph">Starting at: $65.09</p>
+          </div>
+        </div>
+        <div className="card-desing1">
+          <img
+            src="https://bookshelf-snowy.vercel.app/assets/images/book2.jpg"
+            alt="logo"
+            className="image-card"
+          />
+          <div className="description">
+            <h1 className="card-heading">SALE UP TO 10%</h1>
+            <h2 className="card-heading1">
+              Innovation in Education (Hardcover)
+            </h2>
+            <p className="card-paragraph">Starting at: $50.09</p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
