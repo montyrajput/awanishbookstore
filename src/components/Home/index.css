@@ -152,6 +152,7 @@
     flex-direction: column;
     width: 100%;
     margin: 10px;
+    margin-bottom: 100px;
   }
 }
 .image-card {
@@ -206,4 +207,112 @@
     color: #6c757d;
     font-size: 16px;
   }
+}
+
+.footer-container {
+  background-color: #2f4858;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: none;
+  }
+}
+
+.footer-container1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-description {
+  padding-top: 20px;
+}
+.footer-heading {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 550;
+  padding-left: 18px;
+}
+.footer-paragraph {
+  color: white;
+  font-size: 15px;
+  font-family: 'Roboto';
+  font-weight: 450;
+  padding-left: 18px;
+}
+.footer-horizontal {
+  width: 90%;
+  margin-top: 10px;
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.footer-bottom-heading {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 550;
+  padding-left: 18px;
+}
+.footer-bottom-para {
+  color: white;
+  font-size: 15px;
+  font-family: 'Roboto';
+  font-weight: 450;
+  padding-left: 18px;
+}
+.footer-container2 {
+  background-color: #2f4858;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767px) {
+  .footer-container2 {
+    display: none;
+  }
+}
+.footer-container12 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer-bottom1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 40px;
+}
+.footer-heading-desktop {
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: 550;
+}
+.footer-paragraph-desktop {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 450;
+}
+.footer-bottom-heading-desktop {
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: 550;
+}
+.footer-bottom-para-desktop {
+  color: white;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 450;
 }

@@ -101,6 +101,50 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="footer-container">
+        <div className="footer-container1">
+          <div className="footer-description">
+            <h1 className="footer-heading">Book Information?</h1>
+            <p className="footer-paragraph">
+              Please send us an email at support@gmail.com
+            </p>
+          </div>
+          <div className="footer-description">
+            <h1 className="footer-heading">Need Help?</h1>
+            <p className="footer-paragraph">Please call us at 0123456789</p>
+          </div>
+        </div>
+        <hr className="footer-horizontal" />
+        <div className="footer-bottom">
+          <h1 className="footer-bottom-heading">BookShelf</h1>
+          <h1 className="footer-bottom-para">
+            2023 All right reserved. Made with love by ThemeAtelier
+          </h1>
+        </div>
+      </div>
+      <div className="footer-container2">
+        <div className="footer-container12">
+          <div className="footer-description">
+            <h1 className="footer-heading-desktop">Book Information?</h1>
+            <p className="footer-paragraph-desktop">
+              Please send us an email at support@gmail.com
+            </p>
+          </div>
+          <div className="footer-description">
+            <h1 className="footer-heading-desktop">Need Help?</h1>
+            <p className="footer-paragraph-desktop">
+              Please call us at 0123456789
+            </p>
+          </div>
+        </div>
+        <hr className="footer-horizontal" />
+        <div className="footer-bottom1">
+          <h1 className="footer-bottom-heading-desktop">BookShelf</h1>
+          <h1 className="footer-bottom-para-desktop">
+            2023 All right reserved. Made with love by ThemeAtelier
+          </h1>
+        </div>
+      </div>
     </>
   )
 }
