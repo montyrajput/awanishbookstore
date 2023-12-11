@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import Slider from 'react-slick'
 import {v4 as uuidv4} from 'uuid'
 import Header from '../Header'
@@ -59,9 +61,11 @@ const Home = () => {
                 <br />
                 harum quibusdam, assumenda quia explicabo
               </p>
-              <button type="button" className="shop-now-button ">
-                {item.button}
-              </button>
+              <Link to="/Book">
+                <button type="button" className="shop-now-button ">
+                  {item.button}
+                </button>
+              </Link>
             </div>
             <img
               src={item.image}
