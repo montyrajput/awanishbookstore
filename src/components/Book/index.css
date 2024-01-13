@@ -1,0 +1,24 @@
+.All-product-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768) {
+  .All-product-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: center;
+  align-items: center;
+}

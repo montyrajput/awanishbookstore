@@ -2,6 +2,7 @@ import {Component} from 'react'
 import Header from '../Header'
 import BookCard from '../BookCard'
 import FailureView from '../FailureView'
+
 import './index.css'
 
 const apiStatusConstants = {
@@ -26,7 +27,7 @@ class Book extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
 
-    const apiUrl = 'https://api.itbook.store/1.0/search/mongodb'
+    const apiUrl = 'https://api.itbook.store/1.0/search/science'
     const options = {
       method: 'GET',
     }
@@ -69,7 +70,8 @@ class Book extends Component {
     return (
       <>
         <Header />
-        <div>
+
+        <div className="All-product-section">
           <ul className="books-list">
             {books.map(book => (
               <BookCard bookData={book} key={book.isbn13} />
