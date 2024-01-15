@@ -16,6 +16,7 @@ specifiers:
   prettier: 2.2.1
   react: 17.0.1
   react-dom: 17.0.1
+  react-icons: 5.0.1
   react-loader-spinner: 6.1.0
   react-router-dom: 5.2.0
   react-scripts: 4.0.3
@@ -32,6 +33,7 @@ dependencies:
   msw: 0.28.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-icons: 5.0.1_react@17.0.1
   react-loader-spinner: 6.1.0_react-dom@17.0.1+react@17.0.1
   react-router-dom: 5.2.0_react@17.0.1
   react-slick: 0.29.0_react-dom@17.0.1+react@17.0.1
@@ -11431,6 +11433,14 @@ packages:
   /react-error-overlay/6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
     dev: true
+
+  /react-icons/5.0.1_react@17.0.1:
+    resolution: {integrity: sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.1
+    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
