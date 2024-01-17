@@ -50,6 +50,12 @@ class BookDetails extends Component {
           url: fetchData.url,
           image: fetchData.image,
           id: fetchData.isbn13,
+          authors: fetchData.authors,
+          publisher: fetchData.publisher,
+          pages: fetchData.pages,
+          year: fetch.year,
+          rating: fetchData.rating,
+          description: fetchData.desc,
         }
 
         this.setState({
@@ -84,7 +90,16 @@ class BookDetails extends Component {
     <CartContext.Consumer>
       {value => {
         const {BookData, quantity} = this.state
-        const {title, subtitle, price, image} = BookData
+        const {
+          title,
+          price,
+          image,
+          authors,
+          publisher,
+          year,
+          rating,
+          description,
+        } = BookData
 
         const {addCartItem} = value
         const onClickAddToCart = () => {
@@ -92,31 +107,53 @@ class BookDetails extends Component {
         }
 
         return (
-          <div className="Book-item-container">
-            <img src={image} alt={title} />
-            <div>
-              <h1>{title}</h1>
-              <p>{subtitle}</p>
-              <p>{price}</p>
-            </div>
-            <div>
-              <button
-                type="button"
-                onClick={this.onDecrement}
-                aria-label="Decrease quantity"
-              >
-                <BsPlusSquare />
-              </button>
-              <p className="quantity">{quantity}</p>
-              <button
-                type="button"
-                onClick={this.onIncrement}
-                aria-label="Increase quantity"
-              >
-                <BsDashSquare />
-              </button>
-            </div>
-            <div>
+          <div className="book-item-details-container">
+            <img src={image} alt={title} className="book-image" />
+            <div className="text-container">
+              <h1 className="book-title">{title}</h1>
+              <p className="book-price">{price}</p>
+              <div className="rating-view-container">
+                <div className="rating-container">
+                  <p className="rating">{rating}</p>
+                  <img
+                    src="https://assets.ccbp.in/frontend/react-js/star-img.png"
+                    alt="star"
+                    className="star"
+                  />
+                </div>
+                <p className="book-year">{year}</p>
+              </div>
+              <p className="description">{description}</p>
+              <div className="label-value-container">
+                <p className="label">Authors:</p>
+                <p className="value">{authors}</p>
+              </div>
+              <div className="label-value-container">
+                <p className="label">Publisher::</p>
+                <p className="value">{publisher}</p>
+              </div>
+              <hr className="horizontal-line" />
+              <div className="quantity-container">
+                <button
+                  type="button"
+                  aria-label="Save"
+                  className="quantity-controller-button"
+                  onClick={this.onDecrement}
+                  data-testid="minus"
+                >
+                  <BsDashSquare className="quantity-controller-icon" />
+                </button>
+                <p className="quantity">{quantity}</p>
+                <button
+                  type="button"
+                  aria-label="Save"
+                  className="quantity-controller-button"
+                  onClick={this.onIncrement}
+                  data-testid="plus"
+                >
+                  <BsPlusSquare className="quantity-controller-icon" />
+                </button>
+              </div>
               <button
                 type="button"
                 className="button add-to-cart-btn"
@@ -150,7 +187,9 @@ class BookDetails extends Component {
     return (
       <>
         <Header />
-        <div>{this.renderBookDetails()}</div>
+        <div className="book-details-main-container">
+          {this.renderBookDetails()}
+        </div>
       </>
     )
   }
