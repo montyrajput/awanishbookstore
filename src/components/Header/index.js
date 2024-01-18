@@ -7,7 +7,7 @@ const Header = () => (
     <div className="nav-content">
       <div className="nav-bar-moblie-logo">
         <div className="logo-desing-moblie">
-          <Link to="/">
+          <Link to="/" className="nav-link">
             <img
               src="https://tse3.mm.bing.net/th?id=OIP.JmPlzQgZTTAxSj8Lemwy4AHaID&pid=Api&P=0&h=220"
               className="website-logo"
@@ -15,7 +15,9 @@ const Header = () => (
             />
           </Link>
           <h1 className="bookstore-heading">
-            <Link to="/">Book Store</Link>
+            <Link to="/" className="nav-link">
+              Book Store
+            </Link>
           </h1>
         </div>
         <button className="nav-mobile-btn" type="button">
@@ -28,7 +30,7 @@ const Header = () => (
       </div>
       <div className="nav-content nav-bar-large-container ">
         <div className="logo-desing-moblie">
-          <Link to="/">
+          <Link to="/" className="nav-link">
             <img
               src="https://tse3.mm.bing.net/th?id=OIP.JmPlzQgZTTAxSj8Lemwy4AHaID&pid=Api&P=0&h=220"
               className="website-logo"
@@ -36,19 +38,27 @@ const Header = () => (
             />
           </Link>
           <h1 className="large-nav-heading">
-            <Link to="/">BookStore</Link>
+            <Link to="/" className="nav-link">
+              BookStore
+            </Link>
           </h1>
         </div>
         <div className="desing">
           <ul className="nav-menu">
             <li className="nav-menu-item">
-              <Link to="/">Home</Link>
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
             </li>
             <li className="nav-menu-item">
-              <Link to="/Book">Books</Link>
+              <Link to="/Book" className="nav-link">
+                Books
+              </Link>
             </li>
             <li className="nav-menu-item">
-              <Link to="/Cart">Cart</Link>
+              <Link to="/Cart" className="nav-link">
+                Cart
+              </Link>
             </li>
           </ul>
           <button type="button" className="logout-desktop-btn">
@@ -60,7 +70,7 @@ const Header = () => (
     <div className="nav-menu-mobile">
       <ul className="nav-menu-list-mobile">
         <li className="nav-menu-item-mobile">
-          <Link to="/">
+          <Link to="/" className="nav-link">
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
               alt="nav home"
@@ -70,7 +80,7 @@ const Header = () => (
         </li>
 
         <li className="nav-menu-item-mobile">
-          <Link to="/Book">
+          <Link to="/Book" className="nav-link">
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
               alt="nav products"
@@ -80,7 +90,7 @@ const Header = () => (
         </li>
 
         <li className="nav-menu-item-mobile">
-          <Link to="/Cart">
+          <Link to="/Cart" className="nav-link">
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
               alt="nav cart"

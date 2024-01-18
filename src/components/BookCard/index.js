@@ -8,7 +8,7 @@ const BookCard = props => {
 
   return (
     <li className="book-item">
-      <Link to={`/Books/${isbn13}`}>
+      <Link to={`/Books/${isbn13}`} className="nav-item">
         <img src={image} alt="book" className="thumbnail" />
         <div className="book-details">
           <h1 className="title">{title}</h1>

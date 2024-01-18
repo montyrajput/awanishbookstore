@@ -46,7 +46,7 @@ class BookDetails extends Component {
         const bookData = {
           title: fetchData.title,
           subtitle: fetchData.subtitle,
-          price: fetchData.price,
+          price: parseFloat(fetchData.price.replace('$', '')),
           url: fetchData.url,
           image: fetchData.image,
           id: fetchData.isbn13,
@@ -111,7 +111,7 @@ class BookDetails extends Component {
             <img src={image} alt={title} className="book-image" />
             <div className="text-container">
               <h1 className="book-title">{title}</h1>
-              <p className="book-price">{price}</p>
+              <p className="book-price">USD: {price}</p>
               <div className="rating-view-container">
                 <div className="rating-container">
                   <p className="rating">{rating}</p>

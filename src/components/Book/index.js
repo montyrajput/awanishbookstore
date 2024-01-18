@@ -41,7 +41,7 @@ class Book extends Component {
           title: book.title,
           author: book.author,
           subtitle: book.subtitle,
-          price: book.price,
+          price: parseFloat(book.price.replace('$', '')),
           url: book.url,
           image: book.image,
           isbn13: book.isbn13,
