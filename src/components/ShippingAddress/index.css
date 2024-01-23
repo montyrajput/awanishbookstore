@@ -1,0 +1,201 @@
+.shipping-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container-shipping {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: white;
+  box-shadow: 2px 0 15px 5px rgba(1, 6, 33, 0.06);
+  margin: 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .card-container-shipping {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.shipping-image {
+  width: 100%;
+  height: 500px;
+}
+
+@media screen and (min-width: 768px) {
+  .shipping-image {
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+  }
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .text-overlay {
+    text-align: left;
+    width: 50%;
+    transform: translate(-50%, -50%) translateX(-25%);
+  }
+}
+
+.text-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .text-title {
+    padding-left: 0px;
+    font-size: 35px;
+    font-weight: 550;
+    font-family: 'Roboto';
+  }
+}
+
+.text-description {
+  font-size: 1.5rem;
+  padding-bottom: 500px;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .text-description {
+    padding-left: 0px;
+    padding-bottom: 0px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto';
+  }
+}
+
+.delivery-text {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .delivery-text {
+    font-size: 35px;
+  }
+}
+
+.input-container {
+  margin-left: 20px;
+}
+
+.name {
+  width: 280px;
+  height: 40px;
+  margin-bottom: 15px;
+  border-width: 2px;
+  font-size: 15px;
+  color: black;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-width: 0px;
+}
+@media screen and (min-width: 768px) {
+  .name {
+    border-width: 0px;
+    margin-right: 20px;
+    width: 260px;
+  }
+}
+
+.name::placeholder {
+  font-size: 16px;
+  color: rgb(129, 122, 122);
+}
+
+.name:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.name:focus::placeholder {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #007bff;
+}
+
+.name:focus,
+.name:active {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-container-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.save-button {
+  background-color: #0ac07a;
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .save-button {
+    width: 160px;
+    height: 45px;
+    margin-top: 25px;
+  }
+}
+
+.payment-button {
+  background-color: rgb(247, 247, 21);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: black;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 35px;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-button {
+    width: 200px;
+    height: 45px;
+    margin-top: 25px;
+  }
+}
+
+.icons-shipping {
+  width: 250px;
+  height: 100px;
+  margin-left: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .icons-shipping {
+    margin-left: 60px;
+  }
+}
