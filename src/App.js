@@ -6,6 +6,7 @@ import Book from './components/Book'
 import BookDetails from './components/BookDetails'
 import Cart from './components/Cart'
 import ShippingAddress from './components/ShippingAddress'
+import Payment from './components/Payment'
 
 import NotFound from './components/NotFound'
 import CartContext from './context/CartContext'
@@ -104,6 +105,7 @@ class App extends Component {
           <Route exact path="/Books/:isbn13" component={BookDetails} />
           <Route exact path="/Cart" component={Cart} />
           <Route exact path="/shipping" component={ShippingAddress} />
+          <Route exact path="/Payment" component={Payment} />
           <Route path="/not-found" component={NotFound} />
           <Redirect to="not-found" />
         </Switch>

@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import {MdLocalShipping} from 'react-icons/md'
 import Header from '../Header'
 
@@ -49,9 +50,11 @@ const ShippingAddress = () => (
             <button type="button" className="save-button">
               Save
             </button>
-            <button type="button" className="payment-button">
-              Processed to payment
-            </button>
+            <Link to="/payment">
+              <button type="button" className="payment-button">
+                Processed to payment
+              </button>
+            </Link>
           </div>
         </div>
       </div>
