@@ -4,7 +4,7 @@
   width: 80%;
   background-color: white;
   box-shadow: 2px 0 15px 5px rgba(1, 6, 33, 0.06);
-  height: 100vh;
+  height: 200vh;
   margin-left: 35px;
   margin-top: 30px;
 }
@@ -270,10 +270,20 @@
 .payment-input-option-main-container {
   display: flex;
   flex-direction: row;
+}
 
+.payment-input-option-main-container-logic {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.3);
   margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-input-option-main-container-logic {
+    margin-left: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -333,4 +343,104 @@
   font-size: 18px;
   font-family: 'Roboto';
   font-weight: 500;
+}
+
+.payment-button2 {
+  width: 200px;
+  height: 40px;
+  background-color: yellow;
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border-width: 0px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .payment-button2 {
+    margin-left: 100px;
+    width: 350px;
+  }
+}
+
+.credit-card-number {
+  font-size: 20px;
+  font-weight: 450;
+  font-family: 'Roboto';
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .credit-card-number {
+    font-size: 23px;
+    padding-left: 90px;
+  }
+}
+
+.credit-card-input-cardNumber {
+  width: 90%;
+  height: 40px;
+  margin-left: 15px;
+  border-color: #4e7d8f;
+  border-width: 1px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .credit-card-input-cardNumber {
+    width: 80%;
+    margin-left: 90px;
+  }
+}
+
+.credit-month-cvv-number-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.credit-card-cvv-number-details {
+  padding-left: 5px;
+  padding-right: 40px;
+}
+
+.credit-month {
+  width: 100px;
+  height: 30px;
+  margin-left: 15px;
+  border-color: hsl(197, 29%, 43%);
+  border-width: 1px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .credit-month {
+    width: 130px;
+    height: 30px;
+    margin-left: 90px;
+  }
+}
+
+.credit-button {
+  margin-top: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: yellow;
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border-width: 0px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .credit-button {
+    margin-left: 100px;
+    width: 350px;
+  }
 }
