@@ -4,7 +4,7 @@
   width: 80%;
   background-color: white;
   box-shadow: 2px 0 15px 5px rgba(1, 6, 33, 0.06);
-  height: 200vh;
+  height: 140vh;
   margin-left: 35px;
   margin-top: 30px;
 }
@@ -443,4 +443,125 @@
     margin-left: 100px;
     width: 350px;
   }
+}
+
+.payment-cash-on-delivery-paragraph {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: green;
+  padding-left: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-cash-on-delivery-paragraph {
+    font-size: 20px;
+    padding-left: 110px;
+  }
+}
+
+.payment-cash-on-delivery-button {
+  margin-top: 15px;
+  width: 200px;
+  height: 40px;
+  background-color: yellow;
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border-width: 0px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-cash-on-delivery-button {
+    margin-left: 100px;
+    width: 350px;
+  }
+}
+
+.payment-horizontal-line1 {
+  width: 95%;
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.3);
+  height: 12px;
+  background-color: #fff;
+  margin-left: 8px;
+  margin-top: 20px;
+  border-width: 0px;
+}
+@media screen and (min-width: 768px) {
+  .payment-horizontal-line1 {
+    margin-left: 35px;
+    width: 97%;
+  }
+}
+
+.order-successfuly-placed-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.order-successfuly-placed-container1 {
+  height: 500px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 0 15px 5px rgba(1, 6, 33, 0.06);
+}
+
+@media screen and (min-width: 768px) {
+  .order-successfuly-placed-container1 {
+    width: 50%;
+  }
+}
+
+.order-successfully-image-green-tick {
+  background-color: transparent;
+  border: none;
+}
+
+.order-successfully-heading {
+  color: green;
+  font-size: 22px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .order-successfully-heading {
+    font-size: 27px;
+  }
+}
+
+.order-successfully-paragraph {
+  color: yellowgreen;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .order-successfully-paragraph {
+    font-size: 18px;
+  }
+}
+
+.order-successfully-button {
+  background-color: yellow;
+  height: 40px;
+  width: 200px;
+  border-radius: 8px;
+  border-width: 0px;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
 }

@@ -1,4 +1,5 @@
 import {useContext, useState} from 'react'
+import {Link} from 'react-router-dom'
 import {IoIosArrowDown} from 'react-icons/io'
 import {PiCreditCard} from 'react-icons/pi'
 import {GiCash} from 'react-icons/gi'
@@ -8,6 +9,7 @@ import Upi from '../../images/upi-icon.png'
 import PhonePe from '../../images/Phonepay2.png'
 import GooglePay from '../../images/Gpay.png'
 import Paytm from '../../images/Paytm_Logo.png'
+import OrderImage from '../../images/tickimages1.jpeg'
 
 import Header from '../Header'
 
@@ -75,7 +77,10 @@ const Payment = () => {
   }
 
   const handleCreditCardPayment = () => {
-    // Implement logic for credit card payment
+    onPlaceOrder()
+  }
+
+  const handleCashOnDeliveryPayment = () => {
     onPlaceOrder()
   }
 
@@ -128,6 +133,7 @@ const Payment = () => {
             Pay {getTotalPrice()}
           </button>
         )
+
       default:
         return null
     }
@@ -136,7 +142,28 @@ const Payment = () => {
   return (
     <div className="payment-container">
       {isOrderPlaced ? (
-        <p className="success-message">Your order was successfully placed</p>
+        <>
+          <div className="order-successfuly-placed-container">
+            <div className="order-successfuly-placed-container1">
+              <img
+                src={OrderImage}
+                alt="text"
+                className="order-successfully-image-green-tick"
+              />
+              <h1 className="order-successfully-heading">
+                Order Placed Successfully
+              </h1>
+              <p className="order-successfully-paragraph">
+                Thank you for shopping with us
+              </p>
+              <Link to="/">
+                <button type="button" className="order-successfully-button">
+                  Continue to shopping
+                </button>
+              </Link>
+            </div>
+          </div>
+        </>
       ) : (
         <>
           <Header />
@@ -318,17 +345,14 @@ const Payment = () => {
                     </div>
                   )}
                 </div>
+                <hr className="payment-horizontal-line1" />
                 <div>
                   <div className="payment-option-main-container-upi">
                     <div className="payment-option-container">
                       <GiCash className="payment-images-upi" />
                       <div>
                         <h1 className="payment-upi-heading">
-                          Cash on Delivery <br />
-                          <span className="payment-option-paragraph">
-                            Due to handling costs, a nominal <br /> fee of RS: 5
-                            will be Charged
-                          </span>
+                          Cash on Delivery
                         </h1>
                       </div>
                     </div>
@@ -346,8 +370,22 @@ const Payment = () => {
                       <IoIosArrowDown className="payment-option-react-icon1" />
                     </span>
                   </div>
+                  {showPaymentOptions && (
+                    <div>
+                      <p className="payment-cash-on-delivery-paragraph">
+                        Due to handling costs, a nominal fee <br /> of RS: 5
+                        will be Charged
+                      </p>
+                      <button
+                        type="button"
+                        className="payment-cash-on-delivery-button"
+                        onClick={handleCashOnDeliveryPayment}
+                      >
+                        Place order
+                      </button>
+                    </div>
+                  )}
                 </div>
-                <h1>jdklkdh</h1>
               </div>
             </div>
           </div>
