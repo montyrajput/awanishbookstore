@@ -5,6 +5,29 @@ import FailureView from '../FailureView'
 import SearchFilter from '../SearchFilter'
 import './index.css'
 
+const categoryOptions = [
+  {
+    name: 'Science',
+    categoryId: '1',
+  },
+  {
+    name: 'Math',
+    categoryId: '2',
+  },
+  {
+    name: 'SQL',
+    categoryId: '3',
+  },
+  {
+    name: 'JavaScript',
+    categoryId: '4',
+  },
+  {
+    name: 'Python',
+    categoryId: '5',
+  },
+]
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -16,6 +39,7 @@ class Book extends Component {
   state = {
     books: [],
     apiStatus: apiStatusConstants.initial,
+    selectedCategory: null,
   }
 
   componentDidMount() {
@@ -27,7 +51,10 @@ class Book extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
 
-    const apiUrl = 'https://api.itbook.store/1.0/search/science'
+    const {selectedCategory} = this.state
+    const apiUrl = `https://api.itbook.store/1.0/search/${
+      selectedCategory || 'science'
+    }`
     const options = {
       method: 'GET',
     }
@@ -72,7 +99,11 @@ class Book extends Component {
         <Header />
         <div className="book-filter-container-main-container">
           <div className="book-filter-design-container">
-            <SearchFilter onSearch={this.handleSearch} />
+            <SearchFilter
+              onSearch={this.handleSearch}
+              categories={categoryOptions}
+              onCategorySelect={this.handleCategorySelect}
+            />
           </div>
 
           <div className="All-product-section-1">
@@ -130,6 +161,57 @@ class Book extends Component {
     }
   }
 
+  handleCategorySelect = async categoryId => {
+    const selectedCategory = categoryOptions.find(
+      category => category.categoryId === categoryId,
+    )
+    if (!selectedCategory) {
+      console.error('Selected category not found')
+      return
+    }
+    this.setState({
+      selectedCategory: selectedCategory.name,
+      apiStatus: apiStatusConstants.inProgress,
+    })
+
+    const apiUrl = `https://api.itbook.store/1.0/search/${selectedCategory.name}`
+    const options = {
+      method: 'GET',
+    }
+
+    try {
+      const response = await fetch(apiUrl, options)
+      console.log(response)
+
+      if (response.ok) {
+        const data = await response.json()
+        const updatedData = data.books.map(book => ({
+          title: book.title,
+          author: book.author,
+          subtitle: book.subtitle,
+          price: parseFloat(book.price.replace('$', '')),
+          url: book.url,
+          image: book.image,
+          isbn13: book.isbn13,
+        }))
+
+        this.setState({
+          books: updatedData,
+          apiStatus: apiStatusConstants.success,
+        })
+      } else if (response.status === 401) {
+        throw new Error('Unauthorized')
+      } else {
+        throw new Error('Something went wrong')
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error)
+      this.setState({
+        apiStatus: apiStatusConstants.failure,
+      })
+    }
+  }
+
   render() {
     const {apiStatus} = this.state
 
@@ -138,7 +220,6 @@ class Book extends Component {
         return this.renderBooksList()
       case apiStatusConstants.failure:
         return <FailureView />
-
       case apiStatusConstants.inProgress:
         return 'Under progress'
       default:

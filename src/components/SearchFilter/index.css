@@ -71,3 +71,44 @@
     color: whitesmoke;
   }
 }
+
+.category-heading {
+  color: #475569;
+  font-family: 'Roboto';
+  font-weight: 600;
+  padding-left: 30px;
+  font-size: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .category-heading {
+    color: rgb(253, 253, 234);
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+
+.search-filter-catgory-list {
+  list-style-type: none;
+}
+
+.search-filter-category-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #64748b;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 540;
+}
+
+@media screen and (min-width: 768px) {
+  .search-filter-category-button {
+    color: grey;
+    font-size: 22px;
+    font-weight: 540;
+  }
+}
