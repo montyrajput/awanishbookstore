@@ -4,7 +4,7 @@
   width: 80%;
   background-color: white;
   box-shadow: 2px 0 15px 5px rgba(1, 6, 33, 0.06);
-  height: 140vh;
+  height: auto;
   margin-left: 35px;
   margin-top: 30px;
 }
@@ -19,7 +19,7 @@
 
 .order-details-container {
   background-color: #263238;
-  height: 100%;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -564,4 +564,74 @@
   color: black;
   font-size: 15px;
   font-weight: 500;
+}
+
+.payment-delivery-address-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-delivery-address-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.payment-delivery-address-heading {
+  color: white;
+  font-size: 25px;
+  font-weight: 550;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-delivery-address-heading {
+    font-size: 28px;
+    padding-left: 42px;
+  }
+}
+
+.payment-delivery-address-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+.payment-delivery-address-email {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+@media screen and (min-width: 768px) {
+  .payment-delivery-address-email {
+    padding-left: 27px;
+  }
+}
+
+.payment-order-details-container .cart-item {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.payment-order-details-container .cart-product-title {
+  color: white;
+}
+
+.payment-order-details-container .cart-product-brand {
+  color: white;
+}
+
+.payment-order-details-container .cart-quantity {
+  color: white;
+}
+
+.payment-order-details-container .cart-total-price {
+  color: white;
+}
+
+.payment-order-details-container .remove-button {
+  color: red;
 }

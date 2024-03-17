@@ -276,7 +276,12 @@ const ShippingAddress = () => {
                   Save
                 </button>
 
-                <Link to="/payment">
+                <Link
+                  to={{
+                    pathname: '/payment',
+                    state: {selectedDetail, detailsList},
+                  }}
+                >
                   <button
                     type="button"
                     className="payment-button"

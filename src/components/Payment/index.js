@@ -1,10 +1,10 @@
 import {useContext, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import {IoIosArrowDown} from 'react-icons/io'
 import {PiCreditCard} from 'react-icons/pi'
 import {GiCash} from 'react-icons/gi'
 import CartContext from '../../context/CartContext'
-import CartListView from '../CartListView'
+import CartItem from '../CartItem'
 import Upi from '../../images/upi-icon.png'
 import PhonePe from '../../images/Phonepay2.png'
 import GooglePay from '../../images/Gpay.png'
@@ -37,6 +37,7 @@ const paymentOptionsList = [
 ]
 
 const Payment = () => {
+  const location = useLocation()
   const {cartList} = useContext(CartContext)
 
   const [paymentMethod, setPaymentMethod] = useState('')
@@ -49,6 +50,12 @@ const Payment = () => {
     expiry: '',
     cvv: '',
   })
+
+  const {selectedDetail, detailsList} = location.state || {}
+
+  const selectedAddress = detailsList.find(
+    detail => detail.id === selectedDetail,
+  )
 
   const updatedPaymentMethod = event => {
     const {id} = event.target
@@ -172,7 +179,11 @@ const Payment = () => {
             <div className="order-details-container">
               <h1 className="payment-heading">Order Summary</h1>
               <div className="order-display">
-                <CartListView />
+                <div className="payment-order-details-container">
+                  {cartList.map(cartItem => (
+                    <CartItem key={cartItem.id} cartItemDetails={cartItem} />
+                  ))}
+                </div>
               </div>
               <div className="payment-quantity-container">
                 <div className="price-container">
@@ -198,6 +209,40 @@ const Payment = () => {
                     Rs: {getTotalPrice()}/-
                   </p>
                 </div>
+              </div>
+
+              <div className="payment-delivery-address-container">
+                <hr className="payment-horizontal-line" />
+                <h1 className="payment-delivery-address-heading">
+                  Delivery Address :
+                </h1>
+
+                {selectedAddress && (
+                  <div>
+                    <p className="payment-delivery-address-name">
+                      Name:{' '}
+                      <span>
+                        {selectedAddress.firstName} {selectedAddress.lastName}
+                      </span>
+                    </p>
+                    <p className="payment-delivery-address-name">
+                      {' '}
+                      Address: <span>{selectedAddress.address}</span>
+                    </p>
+                    <p className="payment-delivery-address-name">
+                      {selectedAddress.city}, {selectedAddress.state},{' '}
+                      {selectedAddress.zip}
+                    </p>
+                    <div>
+                      <p className="payment-delivery-address-email">
+                        Email: <span>{selectedAddress.email}</span>
+                      </p>
+                    </div>
+                    <p className="payment-delivery-address-name">
+                      Mobile No : <span>{selectedAddress.mobile}</span>
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 
