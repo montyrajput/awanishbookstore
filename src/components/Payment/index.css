@@ -787,3 +787,100 @@
 .payment-order-details-container .remove-button {
   color: red;
 }
+
+.payment-back-button {
+  width: 130px;
+  height: 40px;
+  border: 3px solid yellowgreen;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-back-button {
+    width: 180px;
+    height: 45px;
+    margin-left: 25px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
+}
+
+.payment-back-button:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.payment-back-button:active {
+  color: #000;
+}
+
+.payment-back-button:active:after {
+  background: transparent;
+}
+
+.payment-back-button:hover:before {
+  opacity: 1;
+}
+
+.payment-back-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #263238;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.payment-button-container-back {
+  display: flex;
+  justify-content: flex-start;
+}

@@ -244,6 +244,14 @@ const Payment = () => {
                   </div>
                 )}
               </div>
+
+              <Link to="/shipping">
+                <div className="payment-button-container-back">
+                  <button className="payment-back-button" type="button">
+                    Back
+                  </button>
+                </div>
+              </Link>
             </div>
 
             <div>
