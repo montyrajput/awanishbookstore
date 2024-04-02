@@ -21,6 +21,7 @@ specifiers:
   react-router-dom: 5.2.0
   react-scripts: 4.0.3
   react-slick: 0.29.0
+  react-spinners: 0.13.8
   slick-carousel: 1.8.1
   uuid: 9.0.1
 
@@ -37,6 +38,7 @@ dependencies:
   react-loader-spinner: 6.1.0_react-dom@17.0.1+react@17.0.1
   react-router-dom: 5.2.0_react@17.0.1
   react-slick: 0.29.0_react-dom@17.0.1+react@17.0.1
+  react-spinners: 0.13.8_react-dom@17.0.1+react@17.0.1
   slick-carousel: 1.8.1
   uuid: 9.0.1
 
@@ -11608,6 +11610,16 @@ packages:
       react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
       resize-observer-polyfill: 1.5.1
+    dev: false
+
+  /react-spinners/0.13.8_react-dom@17.0.1+react@17.0.1:
+    resolution: {integrity: sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
     dev: false
 
   /react/17.0.1:

@@ -3,6 +3,7 @@ import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
 import Header from '../Header'
 
 import FailureView from '../FailureView'
+import Loader from '../LoaderComponent'
 import CartContext from '../../context/CartContext'
 import './index.css'
 
@@ -177,7 +178,7 @@ class BookDetails extends Component {
       case apiStatusConstants.failure:
         return <FailureView />
       case apiStatusConstants.inProgress:
-        return 'progress'
+        return <Loader />
       default:
         return null
     }

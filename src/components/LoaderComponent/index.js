@@ -1,16 +1,17 @@
-import Loader from 'react-loader-spinner'
+import {SyncLoader} from 'react-spinners'
 
 const LoaderComponent = () => (
   <div
     className="loader-container"
     data-testid="loader"
     style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
     }}
   >
-    <Loader type="TailSpin" color="#4094EF" height={50} width={50} />
+    <SyncLoader color="#4094EF" size={15} />
   </div>
 )
 

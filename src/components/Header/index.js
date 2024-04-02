@@ -1,4 +1,5 @@
 import {Link, withRouter} from 'react-router-dom'
+import Order from '../../images/order.png'
 import CartContext from '../../context/CartContext'
 
 import './index.css'
@@ -80,6 +81,11 @@ const Header = () => {
                   {renderCartItemsCount()}
                 </Link>
               </li>
+              <li className="nav-menu-item">
+                <Link to="/Order" className="nav-link">
+                  Order
+                </Link>
+              </li>
             </ul>
             <button type="button" className="logout-desktop-btn">
               Logout
@@ -116,7 +122,11 @@ const Header = () => {
                 alt="nav cart"
                 className="nav-bar-img"
               />
-              {renderCartItemsCount()}
+            </Link>
+          </li>
+          <li className="nav-menu-item-mobile">
+            <Link to="/Order" className="nav-link">
+              <img src={Order} alt="nav products" className="nav-bar-img" />
             </Link>
           </li>
         </ul>

@@ -3,6 +3,7 @@ import Header from '../Header'
 import BookCard from '../BookCard'
 import FailureView from '../FailureView'
 import SearchFilter from '../SearchFilter'
+import Loader from '../LoaderComponent'
 import './index.css'
 
 const categoryOptions = [
@@ -221,7 +222,7 @@ class Book extends Component {
       case apiStatusConstants.failure:
         return <FailureView />
       case apiStatusConstants.inProgress:
-        return 'Under progress'
+        return <Loader />
       default:
         return null
     }

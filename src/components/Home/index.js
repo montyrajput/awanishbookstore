@@ -122,7 +122,8 @@ const Home = () => {
         <div className="footer-bottom">
           <h1 className="footer-bottom-heading">BookShelf</h1>
           <h1 className="footer-bottom-para">
-            2023 All right reserved. Made with love by ThemeAtelier
+            2023 All right reserved. Made with love by{' '}
+            <span className="developer-name">Awanish Kumar Singh</span>
           </h1>
         </div>
       </div>
@@ -145,7 +146,7 @@ const Home = () => {
         <div className="footer-bottom1">
           <h1 className="footer-bottom-heading-desktop">BookShelf</h1>
           <h1 className="footer-bottom-para-desktop">
-            2023 All right reserved. Made with love by ThemeAtelier
+            2023 All right reserved. Made with love by Awanish Kumar Singh
           </h1>
         </div>
       </div>

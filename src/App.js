@@ -7,7 +7,7 @@ import BookDetails from './components/BookDetails'
 import Cart from './components/Cart'
 import ShippingAddress from './components/ShippingAddress'
 import Payment from './components/Payment'
-
+import Order from './components/Order'
 import NotFound from './components/NotFound'
 import CartContext from './context/CartContext'
 import './App.css'
@@ -106,6 +106,7 @@ class App extends Component {
           <Route exact path="/Cart" component={Cart} />
           <Route exact path="/shipping" component={ShippingAddress} />
           <Route exact path="/Payment" component={Payment} />
+          <Route exact path="/Order" component={Order} />
           <Route path="/not-found" component={NotFound} />
           <Redirect to="not-found" />
         </Switch>
