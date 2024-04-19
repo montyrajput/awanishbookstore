@@ -14,7 +14,7 @@ const BookCard = props => {
           <h1 className="title">{title}</h1>
           <p className="author"> {subtitle}</p>
 
-          <p className="isbn">USD: {price}</p>
+          <p className="isbn"> INR: {price}</p>
         </div>
       </Link>
     </li>

@@ -8,7 +8,7 @@ import './index.css'
 
 const categoryOptions = [
   {
-    name: 'Science',
+    name: 'New',
     categoryId: '1',
   },
   {
@@ -16,16 +16,28 @@ const categoryOptions = [
     categoryId: '2',
   },
   {
-    name: 'SQL',
+    name: 'Coding',
     categoryId: '3',
   },
   {
-    name: 'JavaScript',
+    name: 'Competitive exam',
     categoryId: '4',
   },
   {
     name: 'Python',
     categoryId: '5',
+  },
+  {
+    name: 'Science',
+    categoryId: '6',
+  },
+  {
+    name: 'Physics',
+    categoryId: '7',
+  },
+  {
+    name: 'History',
+    categoryId: '8',
   },
 ]
 
@@ -54,7 +66,7 @@ class Book extends Component {
 
     const {selectedCategory} = this.state
     const apiUrl = `https://api.itbook.store/1.0/search/${
-      selectedCategory || 'science'
+      selectedCategory || 'All'
     }`
     const options = {
       method: 'GET',
@@ -69,7 +81,7 @@ class Book extends Component {
           title: book.title,
           author: book.author,
           subtitle: book.subtitle,
-          price: parseFloat(book.price.replace('$', '')),
+          price: Math.round(parseFloat(book.price.replace('$', '')) + 200),
           url: book.url,
           image: book.image,
           isbn13: book.isbn13,
@@ -139,7 +151,7 @@ class Book extends Component {
           title: book.title,
           author: book.author,
           subtitle: book.subtitle,
-          price: parseFloat(book.price.replace('$', '')),
+          price: Math.round(parseFloat(book.price.replace('$', '')) + 200),
           url: book.url,
           image: book.image,
           isbn13: book.isbn13,
@@ -190,7 +202,7 @@ class Book extends Component {
           title: book.title,
           author: book.author,
           subtitle: book.subtitle,
-          price: parseFloat(book.price.replace('$', '')),
+          price: Math.round(parseFloat(book.price.replace('$', '')) + 200),
           url: book.url,
           image: book.image,
           isbn13: book.isbn13,

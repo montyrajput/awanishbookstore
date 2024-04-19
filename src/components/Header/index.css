@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
 }
+
 @media screen and (max-width: 767px) {
   .nav-header {
     flex-direction: column;
@@ -33,18 +34,21 @@
   justify-content: space-between;
   width: 100%;
 }
+
 .logo-desing-moblie {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (min-width: 768px) {
   .logo-desing-moblie {
     display: flex;
     flex-direction: row;
   }
 }
+
 @media screen and (min-width: 768px) {
   .nav-bar-moblie-logo {
     display: none;
@@ -56,6 +60,7 @@
     display: none;
   }
 }
+
 .website-logo {
   width: 45px;
   height: 45px;
@@ -84,6 +89,7 @@
     display: none;
   }
 }
+
 .nav-menu-mobile {
   width: 100%;
 }
@@ -167,6 +173,7 @@
   font-weight: 600;
   padding-left: 5px;
 }
+
 @media screen and (min-width: 768px) {
   .large-nav-heading {
     color: greenyellow;
@@ -176,10 +183,12 @@
     padding-left: 8px;
   }
 }
+
 .desing {
   display: flex;
   flex-direction: row;
 }
+
 .nav-link {
   text-decoration: none;
   color: #475569;
@@ -203,4 +212,29 @@
   .cart-count-badge1 {
     background-color: #e6f6ff;
   }
+}
+
+.nav-username-signup-container {
+  width: auto;
+  height: 33px;
+  border: none;
+  font-family: 'Roboto';
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #475569;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-username-signup-container {
+    margin-top: 19px;
+    font-size: 15px;
+  }
+}
+
+.select-sign-up {
+  width: 190px;
+  padding: 25px;
+  font-size: 18px;
+  color: purple;
 }

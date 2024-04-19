@@ -17,7 +17,7 @@ const CartSummary = () => (
         <div className="cart-summary-container">
           <div className="cart-summary-card">
             <h1 className="cart-items-total-price">
-              Order Total: <span>USD: {totalPrice}/-</span>
+              Order Total: <span>INR: {totalPrice}/-</span>
             </h1>
             <p className="cart-items-count">{items} Items in cart</p>
             <Link to="/shipping">

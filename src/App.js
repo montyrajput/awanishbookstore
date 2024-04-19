@@ -8,6 +8,8 @@ import Cart from './components/Cart'
 import ShippingAddress from './components/ShippingAddress'
 import Payment from './components/Payment'
 import Order from './components/Order'
+import SignUp from './components/SignUp'
+import SignIn from './components/SignIn'
 import NotFound from './components/NotFound'
 import CartContext from './context/CartContext'
 import './App.css'
@@ -100,6 +102,8 @@ class App extends Component {
         }}
       >
         <Switch>
+          <Route exact path="/Signin" component={SignIn} />
+          <Route exact path="/Signup" component={SignUp} />
           <Route exact path="/" component={Home} />
           <Route exact path="/Book" component={Book} />
           <Route exact path="/Books/:isbn13" component={BookDetails} />

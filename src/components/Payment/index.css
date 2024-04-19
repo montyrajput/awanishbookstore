@@ -884,3 +884,9 @@
   display: flex;
   justify-content: flex-start;
 }
+
+.payment-final-amount-symbol {
+  background-image: linear-gradient(60deg, #ff671f, #ffffff, #046a38);
+  background-clip: text;
+  color: transparent;
+}

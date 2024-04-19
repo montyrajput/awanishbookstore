@@ -190,11 +190,17 @@ const Payment = () => {
                   <p className="payment-price">
                     Price ({cartList.length} items)
                   </p>
-                  <p className="payment-total-price">RS {getTotalPrice()}/-</p>
+                  <p className="payment-total-price">
+                    <span className="payment-final-amount-symbol">INR:</span>{' '}
+                    {getTotalPrice()}/-
+                  </p>
                 </div>
                 <div className="price-container">
                   <p className="payment-discount">Discount</p>
-                  <p className="payment-discount-price">RS 00/-</p>
+                  <p className="payment-discount-price">
+                    <span className="payment-final-amount-symbol">INR:</span>{' '}
+                    00/ -
+                  </p>
                 </div>
                 <div className="price-container">
                   <p className="payment-price">Delivery Charges</p>
@@ -206,7 +212,8 @@ const Payment = () => {
                     Total Amount :{' '}
                   </h1>
                   <p className="payment-final-amount">
-                    Rs: {getTotalPrice()}/-
+                    <span className="payment-final-amount-symbol">INR:</span>{' '}
+                    {getTotalPrice()}/-
                   </p>
                 </div>
               </div>

@@ -1,10 +1,15 @@
+import {useState, useEffect} from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import Order from '../../images/order.png'
+
 import CartContext from '../../context/CartContext'
 
 import './index.css'
 
 const Header = () => {
+  const [username, setUsername] = useState('')
+  const [isSignedUp, setIsSignedUp] = useState(false)
+
   const renderCartItemsCount = () => (
     <CartContext.Consumer>
       {value => {
@@ -21,6 +26,31 @@ const Header = () => {
       }}
     </CartContext.Consumer>
   )
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem('username')
+    if (storedUsername) {
+      setUsername(storedUsername)
+      setIsSignedUp(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('username', username)
+  }, [username])
+
+  const handleSelectChange = e => {
+    const selectedOption = e.target.value
+
+    if (selectedOption === 'signup') {
+      window.location.href = '/signup'
+    } else if (selectedOption === 'signin') {
+      window.location.href = '/signin'
+    } else if (selectedOption === 'logout') {
+      setUsername('')
+      setIsSignedUp(false)
+    }
+  }
 
   return (
     <nav className="nav-header">
@@ -40,13 +70,26 @@ const Header = () => {
               </Link>
             </h1>
           </div>
-          <button className="nav-mobile-btn" type="button">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
-              className="nav-bar-img"
-              alt="nav logout"
-            />
-          </button>
+          <select
+            className="nav-username-signup-container "
+            onChange={handleSelectChange}
+            value={isSignedUp ? 'UserName' : 'signup'}
+          >
+            {isSignedUp && (
+              <option value="UserName" className="select-sign-up">
+                Username: {username}
+              </option>
+            )}
+            <option value="signup" className="select-sign-up">
+              Sign up
+            </option>
+            <option value="signin" className="select-sign-up">
+              Sign In
+            </option>
+            <option value="signin" className="select-sign-up">
+              Logout
+            </option>
+          </select>
         </div>
         <div className="nav-content nav-bar-large-container ">
           <div className="logo-desing-moblie">
@@ -87,9 +130,27 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-            <button type="button" className="logout-desktop-btn">
-              Logout
-            </button>
+
+            <select
+              className="nav-username-signup-container"
+              onChange={handleSelectChange}
+              value={isSignedUp ? 'UserName' : 'signup'}
+            >
+              {isSignedUp && (
+                <option value="UserName" className="select-sign-up">
+                  Username: {username}
+                </option>
+              )}
+              <option value="signup" className="select-sign-up">
+                Sign up
+              </option>
+              <option value="signin" className="select-sign-up">
+                Sign In
+              </option>
+              <option value="signin" className="select-sign-up">
+                Logout
+              </option>
+            </select>
           </div>
         </div>
       </div>

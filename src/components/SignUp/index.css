@@ -1,0 +1,175 @@
+.sing-up-main-container {
+  background-color: #080710;
+  height: 133vh;
+}
+
+@media screen and (min-width: 768px) {
+  .sing-up-main-container {
+    height: 120vh;
+  }
+}
+
+.sign-up-form-text {
+  height: auto;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+
+  padding-bottom: 25px;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 110px;
+  border-color: chartreuse;
+}
+
+@media screen and (min-width: 768px) {
+  .sign-up-form-text {
+    width: 800px;
+    height: 800px;
+    margin-top: 60px;
+  }
+}
+
+.sign-up-heading {
+  color: #ffffff;
+  text-align: center;
+}
+
+.sign-up-input {
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+::placeholder {
+  color: #e5e5e5;
+}
+
+.sing-up-label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.sign-up-button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 0.15rem;
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
+  color: #fff;
+}
+
+.sign-up-button:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite alternate;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.sign-up-button:active {
+  color: #000;
+}
+
+.sign-up-button:active:after {
+  background: transparent;
+}
+
+.sign-up-button:before {
+  opacity: 1; /* Make the gradient visible by default */
+}
+
+.sign-up-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #263238;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+.sign-up-footer-paragraph {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+.sing-up-link-lelement {
+  color: goldenrod;
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.sign-up-star {
+  color: red;
+  font-size: 25px;
+  padding-left: 5px;
+}
