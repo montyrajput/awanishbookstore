@@ -162,10 +162,10 @@ Page: Checkout Page Details : Back button, Order form (Personal details, Summary
 
 **Home**
 
-| Component | Details                                         | State              | API (IT Bookstore) |
-| --------- | ----------------------------------------------- | ------------------ | ------------------ |
-| Home      | Heading, Description, and "ExploreBooks" button | -                  | -                  |
-| Header    | Links for Pages Home, Book List, Cart, Order    | (Context Consumer) | -                  |
+| Component | Details                                                      | State              | API (IT Bookstore) |
+| --------- | ------------------------------------------------------------ | ------------------ | ------------------ |
+| Home      | Heading, Description, and "ExploreBooks" button              | -                  | -                  |
+| Header    | Links for Pages Home, Book List, Cart, Order, SignIN/SignUp  | (Context Consumer) | -                  |
 
 **Book List**
 
@@ -228,6 +228,18 @@ Page: Checkout Page Details : Back button, Order form (Personal details, Summary
 | Component | Details | State                                                                                   | API (IT Bookstore) |
 | --------- | ------- | --------------------------------------------------------------------------------------- | ------------------ |
 | App       | -       | CarList (Context Provider), ContextCartList, AddToCart(), deleteFromCart(), resetCart() | -                  |
+
+**SignIn**
+
+| Component    | Details                           | State  API (IT BookStore) |
+| ------------ | --------------------------------- | -----| ------------------ |
+| Authenticate | UserName, Password, SingIn Button | -    | -                  |
+
+**SignUp**
+
+| Component       | Details                                                  | State | API (IT BookStore) |
+| --------------  | -------------------------------------------------------- | ----- | ------------------ |
+| SignUp Details  | Name, UserName, Email, Password, Mobile No, SignUp Butto | -     | -                  |
 
 ### Design Files
 
