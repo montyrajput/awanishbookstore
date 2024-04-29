@@ -77,6 +77,10 @@ ReactJS Full Stack Assignment - Interactive Bookstore Application
 
 The application should allow users to browse and search for books, view book details, and books to a shopping cart, and place an order.
 
+## Demo
+
+Link :- https://AwanishBookStor.ccbp.tech
+
 ## Tech Stack
 
 Use ReactJS, React Router, Redux or React context API, CSS or CSS frameworks, Git, and GitHub for hosting the repository.
@@ -162,10 +166,10 @@ Page: Checkout Page Details : Back button, Order form (Personal details, Summary
 
 **Home**
 
-| Component | Details                                                      | State              | API (IT Bookstore) |
-| --------- | ------------------------------------------------------------ | ------------------ | ------------------ |
-| Home      | Heading, Description, and "ExploreBooks" button              | -                  | -                  |
-| Header    | Links for Pages Home, Book List, Cart, Order, SignIN/SignUp  | (Context Consumer) | -                  |
+| Component | Details                                                     | State              | API (IT Bookstore) |
+| --------- | ----------------------------------------------------------- | ------------------ | ------------------ |
+| Home      | Heading, Description, and "ExploreBooks" button             | -                  | -                  |
+| Header    | Links for Pages Home, Book List, Cart, Order, SignIN/SignUp | (Context Consumer) | -                  |
 
 **Book List**
 
@@ -231,15 +235,15 @@ Page: Checkout Page Details : Back button, Order form (Personal details, Summary
 
 **SignIn**
 
-| Component    | Details                           | State  API (IT BookStore) |
-| ------------ | --------------------------------- | -----| ------------------ |
-| Authenticate | UserName, Password, SingIn Button | -    | -                  |
+| Component    | Details                           | State API (IT BookStore) |
+| ------------ | --------------------------------- | ------------------------ | --- |
+| Authenticate | UserName, Password, SingIn Button | -                        | -   |
 
 **SignUp**
 
-| Component       | Details                                                  | State | API (IT BookStore) |
-| --------------  | -------------------------------------------------------- | ----- | ------------------ |
-| SignUp Details  | Name, UserName, Email, Password, Mobile No, SignUp Butto | -     | -                  |
+| Component      | Details                                                  | State | API (IT BookStore) |
+| -------------- | -------------------------------------------------------- | ----- | ------------------ |
+| SignUp Details | Name, UserName, Email, Password, Mobile No, SignUp Butto | -     | -                  |
 
 ### Design Files
 
@@ -255,4 +259,4 @@ Icons (react-icons) Loader (react-spinners) Slider (react-slick)
 
 ### Future Imporvement
 
-NA
+Payment:- Active All payment method
